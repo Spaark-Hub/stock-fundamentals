@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{% load static %}
+<head>
+	<title>details</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content=""/>
+	<link rel="canonical" href="index.html"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link media="all" type="text/css" rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css?v=1.2' %}">
+</head>
+
+<body class="dark">
+
+<header class="innerHeader">  
+    <div class="top-header">
+	    <div class="container">
+	        <div class="clearfix">
+	            <div class="logo-top-left">
+	                <a href="/" class="logo">
+                    <img src="{% static 'images/SMART.png' %}" width="100px" height= "100px" salt="logo">
+	                </a>
+	            </div>
+	            	<div class="right-nav">
+	                    <a href="javascript:void(0)" id="pull">
+	                        <i></i>
+	                    </a>
+	                    <nav class="nav">
+	                        <div class="bg-click hidden-lg hidden-md"></div>
+	                        <ul id="menu-bg">
+	                            <li><a href="/menu/">Home</a></li>
+	                        </ul>
+	                    </nav>
+	                </div>
+	            </div>
+	            
+
+	        </div>
+	    </div>
+	</div>
+</header>
+
+<section class="mt-6 mb-2">
+    <div class="container ">
+        <div id="analysis" class="card card-large">
+          <div class="flex flex-column-mobile flex-gap-32">
+            <div class="pros" style="flex-basis: 50%;">
+              <p class="title">Pros</p>
+              <ul>
+                <li>Growth Stocks offer Opportunity to Optimize profits in Up Trend </li>
+                <li>Stocks below have a High return on equity of over last 1 year.</li>
+              </ul>
+            </div>
+            <div class="cons" style="flex-basis: 50%;">
+              <p class="title">Cons</p>
+              <ul>
+                <li>Growth Stocks must be exercised with caution for optimizing  Returns as RSI > 70 and reversal of trend can be good for Profit Bookings.</li>
+                <li>Momentum Stocks are in demand by Buyers and show strength in Growth</li>
+              </ul>
+            </div>
+          </div>
+          <p class="sub font-size-14 margin-top-16 margin-bottom-0">
+            <span style="vertical-align: sub;">*</span>
+            <span class="font-weight-500">The pros and cons are machine generated.</span>
+           
+          </p>
+        </div>
+    </div>
+</section>
+<section class="mt-6 mb-2">
+    <div class="container ">
+        <div id="peers" class="card card-large">
+          <div class="flex flex-space-between" style="align-items: center;">
+            <div>
+              <h2>Golden Cross Stock Results</h2>
+                <span style="margin: 16px "></span> Industry: <a href="#"> SnP500 Companies </a>
+              </p>
+            </div>
+          </div>
+          <div id="peers-table-placeholder">
+            
+            <div class="responsive-holder fill-card-width" data-page-results="">
+              <table class="data-table text-nowrap striped mark-visited">
+                <tbody>
+                  <tr>
+                    <th data-tooltip="Business Date" scope="colgroup"> Business Date <span style="color: hsl(0, 0%, 45%)"></span>
+                    </th>
+                    <th class="text" scope="colgroup"> Ticker Name </th>
+                    <th data-tooltip="Open Price" scope="colgroup"> Open Price <span style="color: hsl(0, 0%, 45%)"></span>
+                    </th>
+                    <th data-tooltip="High Price" scope="colgroup"> High Price <span style="color: hsl(0, 0%, 45%)"></span>
+                    </th>
+                    <th data-tooltip="Low Price" scope="colgroup"> Low Price <span style="color: hsl(0, 0%, 45%)"></span>
+                    </th>
+                    <th data-tooltip="Close Price" scope="colgroup"> Close Price <span style="color: hsl(0, 0%, 45%)"></span>
+                    </th>
+                    <th data-tooltip="Volume of Trades" scope="colgroup"> Volume<span style="color: hsl(0, 0%, 45%)"></span>
+                    </th>
+                  </tr>  
+               
+      
+            
+        {% for result in results %}
+                  
+        <tr>
+         <td>{{ result.0 }}</td>
+          <td>{{ result.1 }}</td>
+          <td>{{ result.2 }}</td>  
+          <td>{{ result.3 }}</td>  
+          <td>{{ result.4 }}</td>       
+          <td>{{ result.5 }}</td>
+          <td>{{ result.6 }}</td>   
+         </tr>
+        {% endfor %}
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- <footer>
+    <div class="container text-center">
+        <p>Copyright SMART Technologies - UPENN team © 2024. All rights reserved</p>
+    </div>
+</footer> -->
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{% load static %}
+<head>
+	<title>Explore</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content=""/>
+	<link rel="canonical" href="index.html"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="icon" type="image/png" href="{% static favicon.png %}"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link media="all" type="text/css" rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}?v=1.1">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="dark">
+
+<header class="innerHeader">
+    <div class="top-header">
+	    <div class="container">
+	        <div class="clearfix">
+	            <div class="logo-top-left">
+	                <a href="/menu/" class="logo">
+	                    <img src="{% static 'images/SMART.png' %}" alt="logo">
+	                </a>
+                </div>
+	            <div class="top-right">
+	            	<div class="cta-right">
+                        <div class="search d-inline-block" id="desktop-search">
+                            <div class="has-addon left-addon dropdown-typeahead">
+                            </div>
+                        </div>
+                        <a class="button account button-primary" href="/dashboard/">Dashboard</a>
+                        <a href="{% url 'logout' %}" class="button">Logout</a>
+	              	</div>
+                  <div class="right-nav">
+	                    <a href="javascript:void(0)" id="pull">
+	                        <i></i>
+	                    </a>
+	                    <nav class="nav">
+	                        <div class="bg-click hidden-lg hidden-md"></div>
+	                        <ul id="menu-bg">
+	                            <li><a href="">Home</a></li>
+	                            <li><a href="">Explore</a></li>
+	                        </ul>
+	                    </nav>
+	                </div>
+	            </div>
+	            
+
+	        </div>
+	    </div>
+	</div>
+</header>
+
+
+
+<section class="mt-6 mb-2">
+    <div class="container ">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-medium">
+              <h3 class="h4">Welcome back {{ request.session.firstname }} {{ request.session.lastname }}!</h3>
+              <h2 class="h3">Fundamentals Analysis</h2>
+              <div class="row">
+    
+                
+              </div>
+            </div>
+            <div class="card card-medium">
+              <h2 class="h3">      Search Stock Fundamentals  </h2>
+              <p class="sub">Screening formulas based on Fundamentals </p>
+              <div class="row">
+                <div class="col-md-4">
+                  <a class="screen-item" href="/search/">
+                    <div class="font-weight-500 text-primary" >  
+                      Search Fundamentals
+                      <i class="icon-right a smaller"></i>
+                      <p class="sub font-size-12 margin-0 show-from-desktop">Fundamentals of firm's financials</p>
+
+                    </div>
+                  </a>
+ 
+                </div>
+                  <div class="col-md-4">
+                  <a class="screen-item" href="/compare/">
+                    <div class="font-weight-500">
+                      Compare Stocks
+                      <i class="icon-right a smaller"></i>
+                    </div>
+                    <p class="sub font-size-12 margin-0 show-from-desktop">Fundamental Comparison of Ratios of firm's financials</p>
+                  </a>
+                </div>
+           <!--  <div class="col-md-4">
+                  <a class="screen-item" href="/golden/">
+                    <div class="font-weight-500">
+                      Fundamental Ratios
+                      <i class="icon-right a smaller"></i>
+                    </div>
+                    <p class="sub font-size-12 margin-0 show-from-desktop">Stock Ratios for Fundamental Analysis</p>
+                  </a>
+                </div> -->    
+              </div>
+            </div>
+
+
+
+            <div class="card card-medium">
+              <h2 class="h3">Stocks Technicals</h2>
+              <p class="sub">Screening formulas based on technical indicators</p>
+              <div class="row">
+                <div class="col-md-4">
+                  <a class="screen-item text-primary" href="/overvalued/">
+                    <div class="font-weight-500">
+                      Overvalued Stocks
+                      <i class="icon-right a smaller"></i>
+                    </div>
+                    <p class="sub font-size-12 margin-0 show-from-desktop">Companies with RSI value High enough of a firm's financial Fair Value</p>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a class="screen-item" href="/undervalued/">
+                    <div class="font-weight-500">
+                      Undervalued Stocks
+                      <i class="icon-right a smaller"></i>
+                    </div>
+                    <p class="sub font-size-12 margin-0 show-from-desktop">Companies with RSI value Low enough of a firm's financial Fair Value.</p>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a class="screen-item" href="/golden/">
+                    <div class="font-weight-500">
+                      Momentum Stocks
+                      <i class="icon-right a smaller"></i>
+                    </div>
+                    <p class="sub font-size-12 margin-0 show-from-desktop">Golden Cross Signals based Momentum detection.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-medium">
+              <h2 class="h3">Stock Investing Strategies</h2>
+              <p class="sub">Screens based on price action</p>
+              <div class="row">
+                <div class="col-md-4">
+                  <a class="screen-item" href="/ticker/">
+                    <div class="font-weight-500 text-info"> 
+                      RSI Signal Strategy
+                      <i class="icon-right a smaller"></i>
+                    </div>
+                    <p class="sub font-size-12 margin-0 show-from-desktop">Within 10% of 52w High, 100% of 52w Low, Volume &gt; 100000 &amp; Price &gt; 10</p>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a class="screen-item" href="/bticker/">
+                    <div class="font-weight-500">
+                      Bollinger Strategy
+                      <i class="icon-right a smaller"></i>
+                    </div>
+                    <p class="sub font-size-12 margin-0 show-from-desktop">When 50 DMA moves above 200 DMA from below</p>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                <a class="screen-item" href="/bticker/">
+                  <div class="font-weight-500">
+                    Bearish Crossovers
+                    <i class="icon-right a smaller"></i>
+                  </div>
+                  <p class="sub font-size-12 margin-0 show-from-desktop">50 day moving average cut the 200 day MA from Above</p>
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a class="screen-item" href="">
+                  <div class="font-weight-500">
+                    Money Flow Strategy
+                    <i class="icon-right a smaller"></i>
+                  </div>
+                  <p class="sub font-size-12 margin-0 show-from-desktop">Companies where weekly volumes have increased by more than 5x and price movement is positive.</p>
+                </a>
+                </div>
+                <div class="col-md-4">
+                <a class="screen-item" href=" ">
+                  <div class="font-weight-500">
+                    MACD Strategy
+                    <i class="icon-right a smaller"></i>
+                  </div>
+                  <p class="sub font-size-12 margin-0 show-from-desktop">Stocks with RSI of less than 30.</p>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+  <!-- 
+              <h2 class="h3 mb-3">Browse sectors</h2>
+              <div class="flex-row flex-gap-12">
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Aerospace &amp; Defence</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Agro Chemicals</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Air Transport Service</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Alcoholic Beverages</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Auto Ancillaries</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Automobile</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Banks</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Bearings</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Cables</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Capital Goods - Electrical Equipment</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Trading</a>
+                
+                <a href="" class="bordered radius-6 padding-4-12 font-size-14 ink-700">Semi Conductors</a>
+              -->
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="container text-center">
+        <p>Copyright SMART Team © 2024. All rights reserved</p>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</body>
+</html>

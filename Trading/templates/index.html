@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{% load static %}
+<head>
+    <title>index</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content=""/>
+    <link rel="canonical" href="index.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link media="all" type="text/css" rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css?v=1.2' %}">
+</head>
+
+<body class="dark">
+
+<header class="innerHeader">    
+    <div class="top-header">
+        <div class="container">
+            <div class="clearfix">
+                <div class="logo-top-left">
+                    <a href="/" class="logo">
+                        <img src="{% static 'images/logo.png' %}" alt="logo">
+                    </a>
+                </div>
+                <div class="top-right">
+                    <div class="cta-right">
+                        <div class="search d-inline-block" id="desktop-search">
+                            <div class="has-addon left-addon dropdown-typeahead">
+                              <!-- Modify the form to include the action attribute -->
+                              <form method="post" action="/fundamentals/">
+                                  {% csrf_token %}
+                                  <input aria-label="Search for a company" type="search" name="query" autocomplete="off" spellcheck="false" placeholder="Search for a company" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">
+                                  <button type="submit" class="button">Search</button>
+                              </form>
+                              <form method="post" action="/strategy/">
+                                {% csrf_token %}
+                                <input aria-label="Search for a company Strategy" type="search" name="query" autocomplete="off" spellcheck="false" placeholder="Search for a Strategy of the company" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">
+                                <button type="submit" class="button">Search</button>
+                            </form>
+
+                            </div>
+                        </div>
+                        <a class="button account" href="javascript:void(0);">Login</a>
+                    </div>
+                    <div class="right-nav">
+                        <a href="javascript:void(0)" id="pull">
+                            <i></i>
+                        </a>
+                        <nav class="nav">
+                            <div class="bg-click hidden-lg hidden-md"></div>
+                            <ul id="menu-bg">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Explore</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+</body>
+</html>

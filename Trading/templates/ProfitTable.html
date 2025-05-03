@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>details</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content=""/>
+	<link rel="canonical" href="index.html"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="icon" type="image/png" href="favicon.png"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link media="all" type="text/css" rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css?v=1.2">
+</head>
+
+<body class="dark">
+
+<header class="innerHeader">
+    <div class="top-header">
+	    <div class="container">
+	        <div class="clearfix">
+	            <div class="logo-top-left">
+	                <a href="/" class="logo">
+	                    <img src="images/logo.png" alt="logo">
+	                </a>
+	            </div>
+	            <div class="top-right">
+	            	<div class="cta-right">
+                        <div class="search d-inline-block" id="desktop-search">
+                            <div class="has-addon left-addon dropdown-typeahead">
+                              <input aria-label="Search for a company" type="search" autocomplete="off" spellcheck="false" placeholder="Search for a company" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">
+                            </div>
+                        </div>
+	                	<a class="button account" href="javascript:void(0);">Login</a>
+	              	</div>
+	            	<div class="right-nav">
+	                    <a href="javascript:void(0)" id="pull">
+	                        <i></i>
+	                    </a>
+	                    <nav class="nav">
+	                        <div class="bg-click hidden-lg hidden-md"></div>
+	                        <ul id="menu-bg">
+	                            <li><a href="">Home</a></li>
+	                            <li><a href="">Explore</a></li>
+	                        </ul>
+	                    </nav>
+	                </div>
+	            </div>
+	            
+
+	        </div>
+	    </div>
+	</div>
+</header>
+
+
+
+<section class="mt-6 mb-2">
+    <div class="container ">
+        <div class="row">
+          <div class="col-md-12">
+
+            <h2 class="h3">My Investments</h2>
+
+            <div class="card card-medium ">
+
+              <div class="responsive-holder fill-card-width">
+                <table class="data-table responsive-text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>Company</th>
+                      <th>Invested</th>
+                      <th>Current</th>
+                      <th>Return</th>
+                      <th>Market Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="">
+                      <td>
+                        Reliance
+                        <br>
+                        <small>Qty.: 100</small>
+                      </td>
+                      <td>
+                        $126,224
+                        <br>
+                        <small>Avg: $1700</small>
+                      </td>
+                      <td>$216,618</td>
+                      <td class="text-success">
+                        +100118
+                        <br>
+                        <small>(+57.25%)</small>
+                      </td>
+                      <td>$2118</td>
+                    </tr>   
+                    <tr class="">
+                      <td>
+                        RVNL
+                        <br>
+                        <small>Qty.: 1000</small>
+                      </td>
+                      <td>
+                        $26,224
+                        <br>
+                        <small>Avg: $110</small>
+                      </td>
+                      <td>$21,618</td>
+                      <td class="text-danger">
+                        -5018
+                        <br>
+                        <small>(-27.30%)</small>
+                      </td>
+                      <td>$2118</td>
+                    </tr> 
+                    <tr class="">
+                      <td>
+                        Tata Tech
+                        <br>
+                        <small>Qty.: 100</small>
+                      </td>
+                      <td>
+                        $126,224
+                        <br>
+                        <small>Avg: $1700</small>
+                      </td>
+                      <td>$216,618</td>
+                      <td class="text-success">
+                        +100118
+                        <br>
+                        <small>(+57.25%)</small>
+                      </td>
+                      <td>$2118</td>
+                    </tr>                
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <h3>Investment</h3>
+                <div class="progressdiv"  data-percent="86">
+                  <svg class="progressline" width="178" height="178" viewport="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="80" cx="89" cy="89" fill="transparent" stroke-dasharray="502.4" stroke-dashoffset="0" ></circle>
+                    <circle class="bar" r="80" cx="89" cy="89" fill="transparent" stroke-dasharray="502.4" stroke-dashoffset="0"></circle>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- <footer>
+    <div class="container text-center">
+        <p>Copyright © 2024. All rights reserved</p>
+    </div>
+</footer> -->
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+  (function() {
+    window.onload = function() {
+      var totalProgress, progress;
+      const circles = document.querySelectorAll('.progressline');
+      for(var i = 0; i < circles.length; i++) {
+        totalProgress = circles[i].querySelector('circle').getAttribute('stroke-dasharray');
+        progress = circles[i].parentElement.getAttribute('data-percent');
+
+        circles[i].querySelector('.bar').style['stroke-dashoffset'] = totalProgress * progress / 100;
+        
+      }
+    }
+  })();
+</script>
+</body>
+</html>

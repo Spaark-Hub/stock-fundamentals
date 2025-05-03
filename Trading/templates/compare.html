@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{% load static %}
+<head>
+    <title>index</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content=""/>
+    <link rel="canonical" href="index.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link media="all" type="text/css" rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css?v=1.2' %}">
+</head>
+
+           
+<body class="dark">
+
+<header class="innerHeader">    
+    <div class="top-header">
+        <div class="container">
+            <div class="clearfix">
+                <div class="logo-top-left">
+                    <a href="/" class="logo">
+                        <img src="{% static 'images/SMART.png' %}" width="100px" height= "100px" salt="logo">
+                    </a>
+                </div>
+               
+                <div class="right-nav">
+                    <a href="javascript:void(0)" id="pull">
+                        <i></i>
+                    </a>
+                    <nav class="nav">
+                        <div class="bg-click hidden-lg hidden-md"></div>
+                        <ul id="menu-bg">
+                            <li><a href="/menu/">Home</a></li>
+                     
+                        </ul>
+                    </nav>
+                </div>
+                <div class="top-right">
+                    <div class="cta-right">
+                        <div class="search d-inline-block" id="desktop-search">
+                            <div class="has-addon left-addon dropdown-typeahead">
+
+                              <div style="margin-top: 3%">
+                                <form method="post" action="/StockFundamentals/">
+                                    {% csrf_token %}
+                                <div class="home-search" style="margin-bottom:1.5rem">
+                                <div class="has-addon left-addon dropdown-typeahead d-flex">
+                        
+                            
+                                    <input aria-label="Search for a company" type="search" name="query1" style="width: 500px;" autocomplete="off" spellcheck="false" placeholder="Enter Ticker 1" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">
+                                <br> <br><br>
+                                   <input aria-label="Search for a company" type="search" name="query2" style="width: 500px;" autocomplete="off" spellcheck="false" placeholder="Enter Ticker 2" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">
+                                   <br><br><br>
+                                   <button type="submit" class="button button-primary">Compare</button>
+                
+                                    </div>
+                              </div>
+                                </form>		
+                              Suggested Tickers:
+                              <p class="suggestions">
+                                        <a class="button" href="#">Apple: AAPL</a>
+                                        <a class="button" href="#">GOOGLE: GOOG</a>
+                                        <a class="button" href="#">JP Morgan: JPM</a> <br>
+                                        <a class="button" href="#">EBAY: EBAY</a> 
+                                        <a class="button" href="#">IBM: IBM</a>
+                                        <a class="button" href="#">COSTCO: COST</a> <br>
+                                        <a class="button" href="#">ADP: ADP</a>
+                                        <a class="button" href="#">MARRIOT: MAR</a>
+                                </p>
+                            </div>
+                          </div>
+                    
+                              <!-- Modify the form to include the action attribute 
+                              <form method="post" action="/StockFundamentals/">
+                                  {% csrf_token %}
+                                  <input aria-label="Specify Ticker1" type="search" name="query1" autocomplete="off" spellcheck="false" placeholder="add Ticker1" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">
+                              <br> <br>
+                                  <input aria-label="Specify Ticker2" type="search" name="query2" autocomplete="off" spellcheck="false" placeholder="add Ticker2" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">
+ 
+                                  <button type="submit" class="button">Search</button>
+                              </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+</body>
+</html>

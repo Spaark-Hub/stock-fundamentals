@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSI Signal Chart with Buy/Sell Signals</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="rsiChart" width="800" height="400"></canvas>
+
+    <script>
+        const ctx = document.getElementById('rsiChart').getContext('2d');
+
+        const rsiData = [70, 65, 72, 68, 75, 80, 65, 60, 55, 50]; // Sample RSI data
+        const buySignals = [null, null, null, null, null, 80, null, null, null, null]; // Sample buy signals
+        const sellSignals = [null, null, null, null, null, null, null, 60, null, null]; // Sample sell signals
+
+        const rsiChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                datasets: [
+                    {
+                        label: 'RSI Signal',
+                        data: rsiData,
+                        borderColor: 'blue',
+                        borderWidth: 1,
+                        fill: false
+                    },
+                    {
+                        label: 'Buy Signal',
+                        data: buySignals,
+                        borderColor: 'green',
+                        borderWidth: 1,
+                        pointStyle: 'triangle',
+                        pointRadius: 10,
+                        fill: false
+                    },
+                    {
+                        label: 'Sell Signal',
+                        data: sellSignals,
+                        borderColor: 'red',
+                        borderWidth: 1,
+                        pointStyle: 'rect',
+                        pointRadius: 10,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: false,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{% load static %}
+<head>
+	<title>details</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content=""/>
+	<link rel="canonical" href="index.html"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link media="all" type="text/css" rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css?v=1.2' %}">
+</head>
+
+<body class="dark">
+
+<header class="innerHeader">  
+    <div class="top-header">
+	    <div class="container">
+	        <div class="clearfix">
+	            <div class="logo-top-left">
+	                <a href="/" class="logo">
+                    <img src="{% static 'images/SMART.png' %}" width="100px" height= "100px" salt="logo">
+	                </a>
+	            </div>
+	            <div class="top-right">
+	            	<div class="cta-right">
+                        <div class="search d-inline-block" id="desktop-search">
+                            <div class="has-addon left-addon dropdown-typeahead">
+                              <!-- <i class="addon uil uil-search"></i> -->
+           <!--                    <input aria-label="Search for a company" type="search" autocomplete="off" spellcheck="false" placeholder="Search for a company" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">   -->
+                            </div>
+                        </div>
+	         <!--        	<a class="button account" href="javascript:void(0);">Login</a>  -->
+	              	</div>
+	            	<div class="right-nav">
+	                    <a href="javascript:void(0)" id="pull">
+	                        <i></i>
+	                    </a>
+	                    <nav class="nav">
+	                        <div class="bg-click hidden-lg hidden-md"></div>
+	                        <ul id="menu-bg">
+	                            <li><a href="/menu/">Home</a></li>
+	                          
+	                        </ul>
+	                    </nav>
+	                </div>
+	            </div>
+	            
+
+	        </div>
+	    </div>
+	</div>
+</header>
+
+{% if results_stock %}
+  
+<section class="mt-6 mb-2">
+    <div class="container ">
+        <div class="card card-large" id="top">
+          <div class="flex flex-space-between flex-gap-8">
+            <div class="flex-row flex-wrap flex-align-center flex-grow" style="flex-basis: 300px;">
+              <h1 class="margin-0 show-from-tablet-landscape mr-3"></h1>
+             
+              <div class="font-size-18 strong line-height-14">
+                <div class="flex flex-align-center">
+                  <span>$ 2,942</span>
+                  <span class="font-size-12 down margin-left-4">
+                    <i class="icon-circle-down"></i> -0.20% </span>
+                </div>
+                <div class="ink-600 font-size-11 font-weight-500"> 20 Feb - close price </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-links show-from-tablet-landscape" style="font-weight: 500; margin-top: 8px;">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="icon-link"></i>
+              <span style="font-size: 1.8rem;"> {{results_stock.8.8}} </span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="icon-link-ext"></i>
+              <span class="ink-700 upper"> NYSE: 500325 </span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="icon-link-ext"></i>
+              <span class="ink-700 upper"> NYSE : {{results_stock.8.8}} </span>
+            </a>
+          </div>
+          <div class="company-info">
+            <div class="company-profile">
+              <div class="flex flex-column" style="flex: 1 1;">
+                <div class="title">About</div>
+                <div class="sub show-more-box about" style="flex-basis: 100px">
+                  <button class="a show-more-button" aria-label="show more">
+                    <i class="icon-down ink-600"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="company-links hide-from-tablet-landscape margin-top-20" style="font-weight: 500;">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="icon-link"></i>
+                  <span style="font-size: 1.6rem;"> Website </span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="icon-link-ext"></i>
+                  <span class="ink-700 upper" style="letter-spacing: 0.05px;"> BSE </span>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="icon-link-ext"></i>
+                  <span class="ink-700 upper" style="letter-spacing: 0.05px;"> NSE </span>
+                </a>
+              </div>
+            </div>
+            <div class="company-ratios">
+              <ul id="top-ratios">
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> Market Cap </span>
+                  <span class="nowrap value"> $ <span class="number">{{results_stats.0.0}}</span> USD. </span>
+                </li>
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> Current Price </span>
+                  <span class="nowrap value"> $ <span class="number">{{ results_stats.0.6}}</span>
+                  </span>
+                </li>
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> High / Low </span>
+                  <span class="nowrap value">$ <span class="number">{{results_stats.0.7}}</span> / <span class="number">{{results_stats.0.8}}</span>
+                  </span>
+                </li>
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> Stock P/E </span>
+                  <span class="nowrap value">
+                    <span class="number">28.5</span>
+                  </span>
+                </li>
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> ProfitMargin </span>
+                  <span class="nowrap value"> $ <span class="number">{{results_stats.0.1}}%</span>
+                  </span>
+                </li>
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> Dividend Yield </span>
+                  <span class="nowrap value">
+                    <span class="number">{{results_stats.0.2}}%</span> % </span>
+                </li>
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> PERatio </span>
+                  <span class="nowrap value">
+                    <span class="number">{{results_stats.0.3}}%</span> % </span>
+                </li>
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> ROE </span>
+                  <span class="nowrap value">
+                    <span class="number">{{results_stats.0.4}}%</span> % </span>
+                </li>
+                <li class="flex flex-space-between" data-source="default">
+                  <span class="name"> Book Value </span>
+                  <span class="nowrap value"> $ <span class="number">{{results_stats.0.5}}</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</section>
+
+{% endif %}
+
+<section class="mt-6 mb-2">
+    <div class="container ">
+        <div id="analysis" class="card card-large">
+          <div class="flex flex-column-mobile flex-gap-32">
+            <div class="pros" style="flex-basis: 50%;">
+              <p class="title">Pros</p>
+              <ul>
+                <li>Stock {{result3}} is Fundamentally stronger than Stock {{result4}} when compared for Ratios and Profit Margin</li>
+                <li>Stock {{result3}}  can be treated now for Technical Analysis to Perfrom Trading.</li>
+              </ul>
+            </div>
+            <div class="cons" style="flex-basis: 50%;">
+              <p class="title">Cons</p>
+              <ul>
+                <li>Stock {{result3}} is expected to have Lower Returns then the Benchmark</li>
+              <!--  <li>Company has a low return on equity of 8.23% over last 3 years.</li>  -->
+              </ul>
+            </div>
+          </div>
+          <p class="sub font-size-14 margin-top-16 margin-bottom-0">
+            <span style="vertical-align: sub;">*</span>
+            <span class="font-weight-500">The pros and cons are machine generated.</span>
+           
+          </p>
+        </div>
+    </div>
+</section>
+
+<section class="mt-6 mb-2">
+    <div class="container ">
+        <div id="peers" class="card card-large">
+          <div class="flex flex-space-between" style="align-items: center;">
+            <div>
+              <h2>Stock Pricing Data</h2>
+                <span style="margin: 16px "></span> Industry: <a href="#"> SnP500 Companies </a>
+              </p>
+            </div>
+          </div>
+          <div id="peers-table-placeholder">
+            
+            <div class="responsive-holder fill-card-width" data-page-results="">
+              <table class="data-table text-nowrap striped mark-visited">   
+                <tbody>
+                    {% if result1 and result2 %}
+
+                  <tr>
+                    <th class="text" scope="colgroup"> Ratios </th>
+                    <th class="text" scope="colgroup"> Ticker: {{result1.0.16}} </th>
+                    <th class="text" scope="colgroup"> Ticker: {{result2.0.16}} </th>
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup">   Market Cap.   </th>
+                    <th class="text" scope="colgroup">   {{result1.0.0}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.0}} </th>                  
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup"> Profit Margin </th>
+                    <th class="text" scope="colgroup">   {{result1.0.1}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.1}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup">  DividendYield </th>
+                    <th class="text" scope="colgroup">   {{result1.0.2}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.2}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup">  PERatio </th>
+                    <th class="text" scope="colgroup">   {{result1.0.3}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.3}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup"> ROE </th>
+                    <th class="text" scope="colgroup">   {{result1.0.4}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.4}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup"> Book Value </th>
+                    <th class="text" scope="colgroup">   {{result1.0.5}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.5}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup"> EnterpriseValue </th>
+                    <th class="text" scope="colgroup">   {{result1.0.6}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.6}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup"> CASH </th>
+                    <th class="text" scope="colgroup">   {{result1.0.7}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.7}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup">  DividendPayoutRatio </th>
+                    <th class="text" scope="colgroup">   {{result1.0.8}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.8}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup"> SortinoRatio </th>
+                    <th class="text" scope="colgroup">   {{result1.0.9}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.9}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup"> Beta </th>
+                    <th class="text" scope="colgroup">   {{result1.0.10}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.10}} </th>    
+                  </tr> 
+                  <tr>  
+                    <th class="text" scope="colgroup"> Alpha </th>
+                    <th class="text" scope="colgroup">   {{result1.0.11}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.11}} </th>    
+                  </tr> 
+                  <tr>
+                    <th class="text" scope="colgroup"> SharpeRatio </th>
+                    <th class="text" scope="colgroup">   {{result1.0.12}} </th>
+                    <th class="text" scope="colgroup">   {{result2.0.12}} </th>    
+                    
+           
+          
+        {% endif %}
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- 
+<footer>
+    <div class="container text-center">
+        <p>Copyright SMART Technologies - UPENN team © 2024. All rights reserved</p>
+    </div>
+</footer> -->
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</body>
+</html>

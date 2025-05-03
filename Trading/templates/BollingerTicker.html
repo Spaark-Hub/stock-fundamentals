@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	{% load static %}
+<head>
+	<title>index</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />	
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content=""/>
+	<link rel="canonical" href="index.html"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link media="all" type="text/css" rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css?v=1.2' %}">
+</head>
+
+<body class="dark">
+
+<header class="innerHeader">
+    <div class="top-header">
+	    <div class="container">
+	        <div class="clearfix">
+	            <div class="logo-top-left">
+	                <a href="/" class="logo">
+	              <!--       <img src="{% static 'images/logo.png' %}" alt="logo"> -->
+	                </a>
+	            </div>
+	            <div class="top-right">
+	            	<div class="cta-right">
+                        <div class="search d-inline-block" id="desktop-search">
+                            <div class="has-addon left-addon dropdown-typeahead">
+                        </div>
+	               
+	              	</div>
+	            	<div class="right-nav">
+	                    <a href="javascript:void(0)" id="pull">
+	                        <i></i>
+	                    </a>
+	                    <nav class="nav">
+	                        <div class="bg-click hidden-lg hidden-md"></div>
+	                        <ul id="menu-bg">
+	                            <li><a href="/menu/">Home</a></li>
+	                        
+	                        </ul>
+	                    </nav>
+	                </div>
+	            </div>
+	            
+	        </div>
+	    </div>
+	</div>
+</header>
+
+
+
+<section class="mt-6 mb-2">
+    <div class="container ">
+        <main class="">
+          <div class="breadcrumb"></div>
+          <div class="flex flex-column" style="max-width: 650px;
+                      margin: 60px auto;
+                      min-height: 60vh;
+                      text-align: center;
+                      justify-content: center;
+                      padding: 16px">
+            <h1 style="margin-bottom: 0">
+			
+			<img class="u-max-full-width logo" src="{% static 'images/logo.png' %}" alt="logo">
+		
+            </h1>
+			<h4> 
+            <p class="bigger">Stocks analysis and screening for Fundamentals </p> </h4>
+            <div style="margin-top: 3%">
+				<form method="post" action="/bollingerstrategy/">
+					{% csrf_token %}
+				<div class="home-search" style="margin-bottom:1.5rem">
+                <div class="has-addon left-addon dropdown-typeahead d-flex">
+		
+			
+					<input aria-label="Search for a company" type="search" name="query" autocomplete="off" spellcheck="false" placeholder="Search for a company" class="u-full-width" data-company-search="true" style="margin-bottom: 0px;">
+                   <button type="submit" class="button button-primary">Search</button>
+				
+
+            	    </div>
+              </div>
+				</form>		
+			  Or Choose Tickers:
+			  <p class="suggestions">
+				<form method="post" action="/bollingerstrategy/">
+					{% csrf_token %}
+		
+			
+					<input  name="query" value="AAPL" type="hidden">
+					<button type="submit">Apple: AAPL</a>
+				
+
+				</form>		
+					<br> 
+					<form method="post" action="/bollingerstrategy/">
+						{% csrf_token %}
+			
+				
+						<input  name="query" value="GOOG" type="hidden">
+						<button type="submit">GOOGLE: GOOG</a>
+					</form>		
+						<form method="post" action="/bollingerstrategy/">
+							{% csrf_token %}
+							
+							<input  name="query" value="JPM" type="hidden">
+							<button type="submit">JP Morgan: JPM</a>
+						
+						</form>		
+							 
+						
+							<form method="post" action="/bollingerstrategy/">
+								{% csrf_token %}
+								
+								<input  name="query" value="EBAY" type="hidden">
+								<button type="submit">EBAY: EBAY</a>
+							
+							</form>		
+								 
+							<br>
+						<form method="post" action="/bollingerstrategy/">
+							{% csrf_token %}
+							
+							<input  name="query" value="IBM" type="hidden">
+							<button type="submit">IBM: IBM</a>
+						
+						</form>		
+						<form method="post" action="/bollingerstrategy/">
+							{% csrf_token %}
+							
+							<input  name="query" value="EBAY" type="hidden">
+							<button type="submit">EBAY: EBAY</a>
+						
+						</form>		
+						 
+							<form method="post" action="/bollingerstrategy/">
+								{% csrf_token %}
+								
+								<input  name="query" value="COSTCO" type="hidden">
+								<button type="submit">COSTCO: COST</a>
+							
+							</form>		
+							<form method="post" action="/bollingerstrategy/">
+								{% csrf_token %}
+								
+								<input  name="query" value="ADP" type="hidden">
+								<button type="submit">ADP: ADP</a>
+							
+							</form>		
+							<form method="post" action="/bollingerstrategy/">
+								{% csrf_token %}
+								
+								<input  name="query" value="MAR" type="hidden">
+								<button type="submit">MARRIOT: MAR</a>
+							
+							</form>		
+							
+	
+            </div>
+          </div>
+        </main>
+    </div>
+</section>
+
+
+
+<!-- <footer>
+    <div class="container text-center">
+        <p>Copyright SMART TEAM© 2024. All rights reserved</p>
+    </div>
+</footer> -->
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</body>
+</html>
